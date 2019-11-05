@@ -1,0 +1,60 @@
+﻿@model IEnumerable<ProjetoLP3_4bim.Models.Autor>
+
+@{
+    ViewData["Title"] = "Lista de Autores";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de Autores</h2>
+
+<p>
+    <a asp-action="Create">Cadastrar novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeAutor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataNascAutor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NacionalidadeAutor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TelAutor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailAutor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeAutor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataNascAutor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NacionalidadeAutor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TelAutor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmailAutor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdAutor">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdAutor">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdAutor">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

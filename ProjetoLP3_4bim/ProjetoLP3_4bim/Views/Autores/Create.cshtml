@@ -1,0 +1,54 @@
+﻿@model ProjetoLP3_4bim.Models.Autor
+
+@{
+    ViewData["Title"] = "Cadastrar Autor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Cadastrar</h2>
+
+<h4>Autor</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeAutor" class="control-label">Nome</label>
+                <input asp-for="NomeAutor" class="form-control" />
+                <span asp-validation-for="NomeAutor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataNascAutor" class="control-label">Data de Nascimento</label>
+                <input asp-for="DataNascAutor" class="form-control" />
+                <span asp-validation-for="DataNascAutor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NacionalidadeAutor" class="control-label">Nacionalidade</label>
+                <input asp-for="NacionalidadeAutor" class="form-control" />
+                <span asp-validation-for="NacionalidadeAutor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelAutor" class="control-label">Telefone</label>
+                <input asp-for="TelAutor" class="form-control" />
+                <span asp-validation-for="TelAutor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailAutor" class="control-label">E-mail</label>
+                <input asp-for="EmailAutor" class="form-control" />
+                <span asp-validation-for="EmailAutor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
