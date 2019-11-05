@@ -1,0 +1,52 @@
+﻿@model ProjetoLP3_4bim.Models.Autor
+
+@{
+    ViewData["Title"] = "Excluir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excluir</h2>
+
+<h3>Tens certeza que deseja excluir o registro?</h3>
+<div>
+    <h4>Autor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nome
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeAutor)
+        </dd>
+        <dt>
+            Data de Nascimento
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataNascAutor)
+        </dd>
+        <dt>
+            Nacionalidade
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NacionalidadeAutor)
+        </dd>
+        <dt>
+            Telefone
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TelAutor)
+        </dd>
+        <dt>
+            E-mail
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmailAutor)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdAutor" />
+        <input type="submit" value="Excluir" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar para Lista</a>
+    </form>
+</div>
