@@ -1,0 +1,69 @@
+﻿@model ProjetoLP3_4bim.Models.Livro
+
+@{
+    ViewData["Title"] = "Excluir";
+}
+
+<h2>Excluir</h2>
+
+<h3>Tens certeza que deseja excluir o registro?</h3>
+<div>
+    <h4>Livro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TituloLivro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TituloLivro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataLancamentoLivro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataLancamentoLivro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.QtdPaginasLivro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.QtdPaginasLivro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.PrecoLivro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.PrecoLivro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.SinopseLivro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.SinopseLivro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AutorIdAutorNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AutorIdAutorNavigation.EmailAutor)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EditoraIdEditoraNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EditoraIdEditoraNavigation.EmailEditora)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.GeneroLivroIdGeneroLivroNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.GeneroLivroIdGeneroLivroNavigation.NomeGeneroLivro)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdLivro" />
+        <input type="submit" value="Excluir" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar para Lista</a>
+    </form>
+</div>

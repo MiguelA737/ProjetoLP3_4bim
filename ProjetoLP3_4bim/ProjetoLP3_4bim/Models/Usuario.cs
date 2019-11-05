@@ -15,19 +15,27 @@ namespace ProjetoLP3_4bim.Models
         [Key]
         [Column("idUsuario")]
         public int IdUsuario { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "O nome é obrigatório")]
         [Column("nomeUsuario")]
-        [StringLength(1)]
+        [StringLength(60, ErrorMessage = "O nome deve ter no máximo 60 caracteres.")]
+        [Display(Name = "Nome")]
         public string NomeUsuario { get; set; }
+
         [Column("dataNascUsuario", TypeName = "date")]
+        [Display(Name = "Data de nascimento")]
         public DateTime DataNascUsuario { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "O telefone é obrigatório")]
         [Column("telUsuario")]
-        [StringLength(11)]
+        [StringLength(11, ErrorMessage = "O telefone deve ter no máximo 11 caracteres.")]
+        [Display(Name = "Telefone")]
         public string TelUsuario { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "O e-mail é obrigatório")]
         [Column("emailUSUARIO")]
-        [StringLength(1)]
+        [StringLength(60, ErrorMessage = "O e-mail deve ter no máximo 60 caracteres.")]
+        [Display(Name = "E-mail")]
         public string EmailUsuario { get; set; }
 
         [InverseProperty("UsuarioIdUsuarioNavigation")]

@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ProjetoLP3_4bim.Models.Livro>
+
+@{
+    ViewData["Title"] = "Lista";
+}
+
+<h2>Lista</h2>
+
+<p>
+    <a asp-action="Create">Cadastrar novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TituloLivro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataLancamentoLivro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.QtdPaginasLivro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PrecoLivro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SinopseLivro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AutorIdAutorNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EditoraIdEditoraNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.GeneroLivroIdGeneroLivroNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TituloLivro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataLancamentoLivro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.QtdPaginasLivro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PrecoLivro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SinopseLivro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AutorIdAutorNavigation.EmailAutor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EditoraIdEditoraNavigation.EmailEditora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeneroLivroIdGeneroLivroNavigation.NomeGeneroLivro)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdLivro">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdLivro">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdLivro">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

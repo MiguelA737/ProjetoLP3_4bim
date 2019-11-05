@@ -1,0 +1,42 @@
+﻿@model ProjetoLP3_4bim.Models.Usuario
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Usuário</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeUsuario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeUsuario)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNascUsuario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DataNascUsuario)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TelUsuario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TelUsuario)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailUsuario)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmailUsuario)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdUsuario">Editar</a> |
+    <a asp-action="Index">Voltar para Lista</a>
+</div>

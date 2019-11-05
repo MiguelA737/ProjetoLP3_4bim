@@ -1,0 +1,48 @@
+﻿@model ProjetoLP3_4bim.Models.Usuario
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<h2>Cadastrar</h2>
+
+<h4>Usuário</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NomeUsuario" class="control-label"></label>
+                <input asp-for="NomeUsuario" class="form-control" />
+                <span asp-validation-for="NomeUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DataNascUsuario" class="control-label"></label>
+                <input asp-for="DataNascUsuario" class="form-control" />
+                <span asp-validation-for="DataNascUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelUsuario" class="control-label"></label>
+                <input asp-for="TelUsuario" class="form-control" />
+                <span asp-validation-for="TelUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailUsuario" class="control-label"></label>
+                <input asp-for="EmailUsuario" class="form-control" />
+                <span asp-validation-for="EmailUsuario" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar para Lista</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

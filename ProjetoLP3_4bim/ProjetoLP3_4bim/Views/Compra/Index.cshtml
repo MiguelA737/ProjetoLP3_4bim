@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ProjetoLP3_4bim.Models.Compra>
+
+@{
+    ViewData["Title"] = "Lista";
+}
+
+<h2>Lista</h2>
+
+<p>
+    <a asp-action="Create">Cadastrar novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.LivroIdLivroNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioIdUsuarioNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LivroIdLivroNavigation.TituloLivro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioIdUsuarioNavigation.EmailUsuario)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdCompra">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdCompra">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdCompra">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
