@@ -1,0 +1,48 @@
+﻿@model ProjetoLP3_4bim.Models.Livraria
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+
+<h4>Livraria</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="EnderecoIdEndereco" class="control-label"></label>
+                <select asp-for="EnderecoIdEndereco" class ="form-control" asp-items="ViewBag.EnderecoIdEndereco"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomeLivraria" class="control-label"></label>
+                <input asp-for="NomeLivraria" class="form-control" />
+                <span asp-validation-for="NomeLivraria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TelLivraria" class="control-label"></label>
+                <input asp-for="TelLivraria" class="form-control" />
+                <span asp-validation-for="TelLivraria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EmailLivraria" class="control-label"></label>
+                <input asp-for="EmailLivraria" class="form-control" />
+                <span asp-validation-for="EmailLivraria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

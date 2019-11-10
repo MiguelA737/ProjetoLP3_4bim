@@ -10,13 +10,20 @@ namespace ProjetoLP3_4bim.Models
         [Key]
         [Column("idEstoque")]
         public int IdEstoque { get; set; }
+
         [Column("Livro_idLivro")]
+        [Display(Name = "Livro")]
+        [Required(ErrorMessage = "O livro é obrigatório")]
         public int LivroIdLivro { get; set; }
+
         [Column("qtdLivro")]
+        [Display(Name = "Quantidade de exemplares")]
+        [Required(ErrorMessage = "A quantidade de exemplares é obrigatória")]
         public int QtdLivro { get; set; }
 
         [ForeignKey("LivroIdLivro")]
         [InverseProperty("Estoque")]
+        [Display(Name = "Livro")]
         public Livro LivroIdLivroNavigation { get; set; }
     }
 }
