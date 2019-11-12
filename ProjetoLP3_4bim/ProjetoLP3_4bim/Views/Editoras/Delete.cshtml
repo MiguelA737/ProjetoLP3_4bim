@@ -1,0 +1,40 @@
+﻿@model ProjetoLP3_4bim.Models.Editora
+
+@{
+    ViewData["Title"] = "Excluir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excluir</h2>
+
+<h3>Tens certeza que deseja excluir o registro?</h3>
+<div>
+    <h4>Editora</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeEditora)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeEditora)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TelEditora)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TelEditora)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailEditora)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmailEditora)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdEditora" />
+        <input type="submit" value="Excluir" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar para Lista</a>
+    </form>
+</div>

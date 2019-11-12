@@ -15,18 +15,24 @@ namespace ProjetoLP3_4bim.Models
         [Key]
         [Column("idEditora")]
         public int IdEditora { get; set; }
+
         [Required]
         [Column("nomeEditora")]
-        [StringLength(1)]
+        [Display(Name = "Nome")]
+        [StringLength(60, ErrorMessage = "O nome deve ter no máximo 60 caracteres.")]
         public string NomeEditora { get; set; }
+
         [Required]
         [Column("telEditora")]
-        [StringLength(1)]
+        [Display(Name = "Telefone")]
+        [StringLength(11, ErrorMessage = "O telefone deve ter no máximo 11 números.")]
         public string TelEditora { get; set; }
+
         [Required]
-        [Column("emailEditora")]
-        [StringLength(1)]
+        [Display(Name = "E-mail")]
+        [StringLength(20, ErrorMessage = "O e-mail deve ter no máximo 20 caracteres.")]
         public string EmailEditora { get; set; }
+
 
         [InverseProperty("EditoraIdEditoraNavigation")]
         public ICollection<Livro> Livro { get; set; }

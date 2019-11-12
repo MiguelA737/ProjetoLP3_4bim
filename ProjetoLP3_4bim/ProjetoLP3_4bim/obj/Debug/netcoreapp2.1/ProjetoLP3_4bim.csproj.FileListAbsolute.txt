@@ -277,3 +277,8 @@ C:\Users\IFSP\Downloads\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debu
 C:\Users\IFSP\Downloads\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\Razor\Views\GeneroLivros\Details.g.cshtml.cs
 C:\Users\IFSP\Downloads\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\Razor\Views\GeneroLivros\Edit.g.cshtml.cs
 C:\Users\IFSP\Downloads\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\Razor\Views\GeneroLivros\Index.g.cshtml.cs
+C:\Users\IFSP\Downloads\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\Razor\Views\Editoras\Create.g.cshtml.cs
+C:\Users\IFSP\Downloads\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\Razor\Views\Editoras\Delete.g.cshtml.cs
+C:\Users\IFSP\Downloads\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\Razor\Views\Editoras\Details.g.cshtml.cs
+C:\Users\IFSP\Downloads\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\Razor\Views\Editoras\Edit.g.cshtml.cs
+C:\Users\IFSP\Downloads\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\Razor\Views\Editoras\Index.g.cshtml.cs
