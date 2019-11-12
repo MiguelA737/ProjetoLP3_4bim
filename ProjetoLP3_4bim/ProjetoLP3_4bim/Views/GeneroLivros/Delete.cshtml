@@ -1,0 +1,34 @@
+﻿@model ProjetoLP3_4bim.Models.GeneroLivro
+
+@{
+    ViewData["Title"] = "Excluir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excluir</h2>
+
+<h3>Tens certeza que deseja excluir o registro?</h3>
+<div>
+    <h4>Gênero</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeGeneroLivro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeGeneroLivro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DesGeneroLivro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DesGeneroLivro)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdGeneroLivro" />
+        <input type="submit" value="Excluir" class="btn btn-default" /> |
+        <a asp-action="Index">Voltar para Lista</a>
+    </form>
+</div>

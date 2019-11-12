@@ -23,6 +23,7 @@ namespace ProjetoLP3_4bim.Models
 
         [DataType(DataType.Date)]
         [Column("dataNascAutor", TypeName = "date")]
+        [Display(Name ="Data de Nascimento")]
         public DateTime DataNascAutor { get; set; }
 
         [Column("nacionalidadeAutor")]

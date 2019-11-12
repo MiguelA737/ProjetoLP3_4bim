@@ -1,0 +1,31 @@
+﻿@model ProjetoLP3_4bim.Models.GeneroLivro
+
+@{
+    ViewData["Title"] = "Detalhes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Gênero</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeGeneroLivro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeGeneroLivro)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DesGeneroLivro)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DesGeneroLivro)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdGeneroLivro">Editar</a> |
+    <a asp-action="Index">Voltar para Lista</a>
+</div>
