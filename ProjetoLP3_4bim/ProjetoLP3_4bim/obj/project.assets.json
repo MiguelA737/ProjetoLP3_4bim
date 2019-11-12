@@ -12539,11 +12539,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\IFSP\\Downloads\\ProjetoLP3_4bim\\ProjetoLP3_4bim\\ProjetoLP3_4bim\\ProjetoLP3_4bim.csproj",
+      "projectUniqueName": "C:\\Users\\IFSP\\Documents\\ProjetoLP3_4bim\\ProjetoLP3_4bim\\ProjetoLP3_4bim\\ProjetoLP3_4bim.csproj",
       "projectName": "ProjetoLP3_4bim",
-      "projectPath": "C:\\Users\\IFSP\\Downloads\\ProjetoLP3_4bim\\ProjetoLP3_4bim\\ProjetoLP3_4bim\\ProjetoLP3_4bim.csproj",
+      "projectPath": "C:\\Users\\IFSP\\Documents\\ProjetoLP3_4bim\\ProjetoLP3_4bim\\ProjetoLP3_4bim\\ProjetoLP3_4bim.csproj",
       "packagesPath": "C:\\Users\\IFSP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\IFSP\\Downloads\\ProjetoLP3_4bim\\ProjetoLP3_4bim\\ProjetoLP3_4bim\\obj\\",
+      "outputPath": "C:\\Users\\IFSP\\Documents\\ProjetoLP3_4bim\\ProjetoLP3_4bim\\ProjetoLP3_4bim\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
