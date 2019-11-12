@@ -11,7 +11,7 @@ USE Livrarias
 CREATE TABLE Pais (
 
 	idPais INTEGER PRIMARY KEY IDENTITY,
-	nomePais VARCHAR NOT NULL
+	nomePais VARCHAR(60) NOT NULL
 
 )
 
@@ -19,7 +19,7 @@ CREATE TABLE Bairro (
 
 	idBairro INTEGER PRIMARY KEY IDENTITY,
 	Pais_idPais INTEGER REFERENCES Pais(idPais) NOT NULL,
-	nomeBairro VARCHAR NOT NULL
+	nomeBairro VARCHAR(60) NOT NULL
 
 )
 
@@ -27,7 +27,7 @@ CREATE TABLE Rua (
 
 	idRua INTEGER PRIMARY KEY IDENTITY,
 	Bairro_idBairro INTEGER REFERENCES Bairro(idBairro) NOT NULL,
-	nomeRua VARCHAR NOT NULL
+	nomeRua VARCHAR(60) NOT NULL
 
 )
 
@@ -43,47 +43,47 @@ CREATE TABLE Livraria (
 
 	idLivraria INTEGER PRIMARY KEY IDENTITY,
 	Endereco_idEndereco INTEGER REFERENCES Endereco(idEndereco) NOT NULL,
-	nomeLivraria VARCHAR NOT NULL,
+	nomeLivraria VARCHAR(60) NOT NULL,
 	telLivraria VARCHAR(11) NOT NULL,
-	emailLivraria VARCHAR NOT NULL
+	emailLivraria VARCHAR(20) NOT NULL
 
 )
 
 CREATE TABLE Usuario (
 
 	idUsuario INTEGER PRIMARY KEY IDENTITY,
-	nomeUsuario VARCHAR NOT NULL,
+	nomeUsuario VARCHAR(60) NOT NULL,
 	dataNascUsuario DATE NOT NULL,
 	telUsuario VARCHAR(11) NOT NULL,
-	emailUSUARIO VARCHAR NOT NULL
+	emailUSUARIO VARCHAR(20) NOT NULL
 
 )
 
 CREATE TABLE GeneroLivro (
 
 	idGeneroLivro INTEGER PRIMARY KEY IDENTITY,
-	nomeGeneroLivro VARCHAR NOT NULL,
-	desGeneroLivro TEXT
+	nomeGeneroLivro VARCHAR(60) NOT NULL,
+	desGeneroLivro VARCHAR(100)
 
 )
 
 CREATE TABLE Editora (
 
 	idEditora INTEGER PRIMARY KEY IDENTITY,
-	nomeEditora VARCHAR NOT NULL,
-	telEditora VARCHAR NOT NULL,
-	emailEditora VARCHAR NOT NULL
+	nomeEditora VARCHAR(60) NOT NULL,
+	telEditora VARCHAR(11) NOT NULL,
+	emailEditora VARCHAR(20) NOT NULL
 
 )
 
 CREATE TABLE Autor (
 
 	idAutor INTEGER PRIMARY KEY IDENTITY,
-	nomeAutor VARCHAR NOT NULL,
+	nomeAutor VARCHAR(60) NOT NULL,
 	dataNascAutor DATE NOT NULL,
-	nacionalidadeAutor VARCHAR,
+	nacionalidadeAutor VARCHAR(20),
 	telAutor VARCHAR(11) NOT NULL,
-	emailAutor VARCHAR NOT NULL
+	emailAutor VARCHAR(20) NOT NULL
 
 )
 
@@ -93,11 +93,11 @@ CREATE TABLE Livro (
 	Editora_idEditora INTEGER REFERENCES Editora(idEditora) NOT NULL,
 	GeneroLivro_idGeneroLivro INTEGER REFERENCES GeneroLivro(idGeneroLivro) NOT NULL,
 	Autor_idAutor INTEGER REFERENCES Autor(idAutor) NOT NULL,
-	tituloLivro VARCHAR NOT NULL,
+	tituloLivro VARCHAR(60) NOT NULL,
 	dataLancamentoLivro DATE NOT NULL,
 	qtdPaginasLivro INTEGER NOT NULL,
 	precoLivro DECIMAL NOT NULL,
-	sinopseLivro TEXT
+	sinopseLivro VARCHAR(100)
 
 )
 
