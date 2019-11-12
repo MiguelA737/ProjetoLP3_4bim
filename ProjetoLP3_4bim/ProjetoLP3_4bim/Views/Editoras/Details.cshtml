@@ -1,0 +1,37 @@
+﻿@model ProjetoLP3_4bim.Models.Editora
+
+@{
+    ViewData["Title"] = "Detalhes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Editora</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeEditora)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeEditora)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TelEditora)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TelEditora)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.EmailEditora)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.EmailEditora)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdEditora">Editar</a> |
+    <a asp-action="Index">Voltar para Lista</a>
+</div>
