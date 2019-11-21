@@ -15,9 +15,9 @@ namespace ProjetoLP3_4bim.Models
         [Key]
         [Column("idPais")]
         public int IdPais { get; set; }
-        [Required]
         [Column("nomePais")]
-        [StringLength(1)]
+        [Display(Name = "Nome")]
+        [StringLength(60, ErrorMessage = "Deve ter no máximo 60 caracteres."), Required(ErrorMessage = "O nome é obrigatório.")]
         public string NomePais { get; set; }
 
         [InverseProperty("PaisIdPaisNavigation")]

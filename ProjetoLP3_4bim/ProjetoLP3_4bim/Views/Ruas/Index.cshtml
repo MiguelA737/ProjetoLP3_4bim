@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ProjetoLP3_4bim.Models.Rua>
+
+@{
+    ViewData["Title"] = "Lista de Ruas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista de Ruas</h2>
+
+<p>
+    <a asp-action="Create">Cadastrar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeRua)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BairroIdBairroNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeRua)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BairroIdBairroNavigation.NomeBairro)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdRua">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdRua">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdRua">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

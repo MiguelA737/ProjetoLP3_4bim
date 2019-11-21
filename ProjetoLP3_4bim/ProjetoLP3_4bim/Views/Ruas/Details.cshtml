@@ -1,0 +1,31 @@
+﻿@model ProjetoLP3_4bim.Models.Rua
+
+@{
+    ViewData["Title"] = "Detalhes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Rua</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeRua)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NomeRua)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.BairroIdBairroNavigation)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BairroIdBairroNavigation.NomeBairro)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdRua">Editar</a> |
+    <a asp-action="Index">Voltar para Lista</a>
+</div>
