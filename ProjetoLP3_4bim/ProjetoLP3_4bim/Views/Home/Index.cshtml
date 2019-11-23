@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home";
 }
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
@@ -10,35 +10,28 @@
     </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <img src="~/images/classicos.jpg" alt="ASP.NET" class="img-responsive" />
+            <img src="~/images/classicos.png" alt="ASP.NET" class="img-responsive" />
             <div class="carousel-caption" role="option">
-                <p>
+                <p class="texto-card">
                     Bem-vindo ao país do clássico.<br />
-                    <a class="btn btn-default" href="https://www.saraiva.com.br/livros/literatura-brasileira">
-                        Veja mais
-                    </a>
                 </p>
             </div>
         </div>
         <div class="item">
-            <img src="~/images/best.jpg" alt="Visual Studio" class="img-responsive" />
+            <img src="~/images/best.png" alt="Visual Studio" class="img-responsive" />
             <div class="carousel-caption" role="option">
-                <p>
-                   Pessoas conectadas escolhem mais vendidos.<br />
-                    <a class="btn btn-default" href="https://www.saraiva.com.br/busca?fq=C:4&O=OrderByTopSaleDESC">
-                        Veja mais
-                    </a>
+                <p class="texto-card">
+                    Pessoas conectadas escolhem mais vendidos.<br />
                 </p>
+
+ 
             </div>
         </div>
         <div class="item">
-            <img src="~/images/adaptacao.jpg" alt="Microsoft Azure" class="img-responsive" />
+            <img src="~/images/adapt.jpg" alt="Microsoft Azure" class="img-responsive" />
             <div class="carousel-caption" role="option">
-                <p>
+                <p class="texto-card">
                     Todos adoramos uma adaptação!<br />
-                    <a class="btn btn-default" href="https://www.saraiva.com.br/especial/harry-potter">
-                        Veja mais
-                    </a>
                 </p>
             </div>
         </div>
@@ -52,18 +45,26 @@
         <span class="sr-only">Next</span>
     </a>
 </div>
-
+<br />
 <div class="row">
-    <div class="col-12 col-md-6">
-        <div class="card">
-            <img class="card-img-top" src="~/images/livros.jpg"/>
-            <div class="card-body">
-                <a asp-area="" asp-controller="Livro" asp-action="Index" class="card-title">Livros</a>
-
-                <p class="card-text">
-
-                </p>
-            </div>
-        </div>
+    <div class="col-md-4 justify-content-center">
+        <h2>Livro, nosso melhor amigo</h2>
+        <img class="home-images" src="~/images/livros.jpg" />
+        <p>
+            Conheça nossa seleção dos tão amados... Livros!
+        </p>
+        <a  class="btn btn-default" href="https://localhost:44319/Livro">Clique aqui! &raquo;</a>
+    </div>
+    <div class="col-md-4 justify-content-center">
+        <h2>Seus autores favoritos</h2>
+        <img  class="home-images" src="~/images/autores.png" />
+        <p>Quem não tem um autor preferido? Conheça os nossos!</p>
+        <a class="btn btn-default mr-0 ml-0" href="https://localhost:44319/Autores">Acesse! &raquo;</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Compre seu livro</h2>
+        <img class="home-images" src="~/images/compra.jpg" />
+        <p>Adquira já o seu livro!</p>
+        <a class="btn btn-default mr-0 ml-0" href="https://localhost:44319/Compra">Compre aqui! &raquo;</a>
     </div>
 </div>

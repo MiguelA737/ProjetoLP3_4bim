@@ -15,6 +15,8 @@ namespace ProjetoLP3_4bim.Models
         [Key]
         [Column("idBairro")]
         public int IdBairro { get; set; }
+
+        [Display(Name = "País")]
         [Column("Pais_idPais")]
         public int PaisIdPais { get; set; }
         [Column("nomeBairro")]
@@ -22,6 +24,7 @@ namespace ProjetoLP3_4bim.Models
         [StringLength(60, ErrorMessage = "O nome deve ter no máximo 60 caracteres."), Required(ErrorMessage = "O nome é obrigatório.")]
         public string NomeBairro { get; set; }
 
+        [Display(Name = "País")]
         [ForeignKey("PaisIdPais")]
         [InverseProperty("Bairro")]
         public Pais PaisIdPaisNavigation { get; set; }

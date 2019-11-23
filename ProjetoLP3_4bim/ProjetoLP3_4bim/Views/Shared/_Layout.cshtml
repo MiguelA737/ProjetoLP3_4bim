@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ProjetoLP3_4bim</title>
+    <title>@ViewData["Title"] - País das Livrarias</title>
 
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" type="text/css" href="~/css/site.css" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -26,13 +26,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">ProjetoLP3_4bim</a>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" id="Titulo">País das Livrarias</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+                    <li><a asp-area="" asp-controller="Usuario" asp-action="Index" class="menu-link">Usuários</a></li>
+                    <li><a asp-area="" asp-controller="Autores" asp-action="Index" class="menu-link">Autores</a></li>
+                    <li><a asp-area="" asp-controller="Editoras" asp-action="Index" class="menu-link">Editoras</a></li>
+                    <li><a asp-area="" asp-controller="GeneroLivros" asp-action="Index" class="menu-link">Gênero Literários</a></li>
+                    <li><a asp-area="" asp-controller="Livro" asp-action="Index" class="menu-link">Livros</a></li>
+                    <li><a asp-area="" asp-controller="Livraria" asp-action="Index" class="menu-link">Livrarias</a></li>
+                    <li><a asp-area="" asp-controller="Compra" asp-action="Index" class="menu-link">Compra</a></li>
+                    <li><a asp-area="" asp-controller="Estoque" asp-action="Index" class="menu-link">Estoque</a></li>
+                    <li><a asp-area="" asp-controller="Pais" asp-action="Index" class="menu-link">Países</a></li>
+                    <li><a asp-area="" asp-controller="Bairros" asp-action="Index" class="menu-link">Bairros</a></li>
+                    <li><a asp-area="" asp-controller="Ruas" asp-action="Index" class="menu-link">Ruas</a></li>
+                    <li><a asp-area="" asp-controller="Endereco" asp-action="Index" class="menu-link">Endereço</a></li>
+
                 </ul>
             </div>
         </div>
@@ -44,7 +54,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2019 - ProjetoLP3_4bim</p>
+            <p>&copy; 2019 - País das Livrarias</p>
         </footer>
     </div>
 
