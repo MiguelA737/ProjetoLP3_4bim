@@ -33,5 +33,6 @@ namespace ProjetoLP3_4bim.Models
 
         [InverseProperty("EnderecoIdEnderecoNavigation")]
         public ICollection<Livraria> Livraria { get; set; }
+
     }
 }

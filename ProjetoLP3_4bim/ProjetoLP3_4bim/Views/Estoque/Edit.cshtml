@@ -20,6 +20,11 @@
                 <span asp-validation-for="LivroIdLivro" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="LivrariaIdLivraria" class="control-label"></label>
+                <select asp-for="LivrariaIdLivraria" class="form-control" asp-items="ViewBag.LivrariaIdLivraria"></select>
+                <span asp-validation-for="LivrariaIdLivraria" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="QtdLivro" class="control-label"></label>
                 <input asp-for="QtdLivro" class="form-control" />
                 <span asp-validation-for="QtdLivro" class="text-danger"></span>

@@ -36,5 +36,8 @@ namespace ProjetoLP3_4bim.Models
         [InverseProperty("Livraria")]
         [Display(Name = "Endereço da Livraria")]
         public Endereco EnderecoIdEnderecoNavigation { get; set; }
+
+        [InverseProperty("LivrariaIdLivrariaNavigation")]
+        public ICollection<Estoque> Estoque { get; set; }
     }
 }

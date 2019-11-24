@@ -41,12 +41,12 @@
                 @Html.DisplayFor(modelItem => item.EmailLivraria)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EnderecoIdEnderecoNavigation.IdEndereco)
+                @Html.DisplayFor(modelItem => item.EnderecoIdEnderecoNavigation.RuaIdRuaNavigation.NomeRua), @Html.DisplayFor(modelItem => item.EnderecoIdEnderecoNavigation.NumeroEndereco)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdLivraria">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdLivraria">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdLivraria">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.IdLivraria">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdLivraria">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdLivraria">Excluir</a>
             </td>
         </tr>
 }
