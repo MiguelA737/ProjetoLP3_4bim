@@ -21,7 +21,7 @@ namespace ProjetoLP3_4bim.Controllers
         // GET: Estoque
         public async Task<IActionResult> Index()
         {
-            var livrariasContext = _context.Estoque.Include(e => e.LivroIdLivroNavigation);
+            var livrariasContext = _context.Estoque.Include(e => e.LivrariaIdLivrariaNavigation).Include(e => e.LivroIdLivroNavigation);
             return View(await livrariasContext.ToListAsync());
         }
 
@@ -34,6 +34,7 @@ namespace ProjetoLP3_4bim.Controllers
             }
 
             var estoque = await _context.Estoque
+                .Include(e => e.LivrariaIdLivrariaNavigation)
                 .Include(e => e.LivroIdLivroNavigation)
                 .FirstOrDefaultAsync(m => m.IdEstoque == id);
             if (estoque == null)
@@ -47,6 +48,7 @@ namespace ProjetoLP3_4bim.Controllers
         // GET: Estoque/Create
         public IActionResult Create()
         {
+            ViewData["LivrariaIdLivraria"] = new SelectList(_context.Livraria, "IdLivraria", "EmailLivraria");
             ViewData["LivroIdLivro"] = new SelectList(_context.Livro, "IdLivro", "TituloLivro");
             return View();
         }
@@ -56,7 +58,7 @@ namespace ProjetoLP3_4bim.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("IdEstoque,LivroIdLivro,QtdLivro")] Estoque estoque)
+        public async Task<IActionResult> Create([Bind("IdEstoque,LivroIdLivro,LivrariaIdLivraria,QtdLivro")] Estoque estoque)
         {
             if (ModelState.IsValid)
             {
@@ -64,6 +66,7 @@ namespace ProjetoLP3_4bim.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["LivrariaIdLivraria"] = new SelectList(_context.Livraria, "IdLivraria", "EmailLivraria", estoque.LivrariaIdLivraria);
             ViewData["LivroIdLivro"] = new SelectList(_context.Livro, "IdLivro", "TituloLivro", estoque.LivroIdLivro);
             return View(estoque);
         }
@@ -81,6 +84,7 @@ namespace ProjetoLP3_4bim.Controllers
             {
                 return NotFound();
             }
+            ViewData["LivrariaIdLivraria"] = new SelectList(_context.Livraria, "IdLivraria", "EmailLivraria", estoque.LivrariaIdLivraria);
             ViewData["LivroIdLivro"] = new SelectList(_context.Livro, "IdLivro", "TituloLivro", estoque.LivroIdLivro);
             return View(estoque);
         }
@@ -90,7 +94,7 @@ namespace ProjetoLP3_4bim.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("IdEstoque,LivroIdLivro,QtdLivro")] Estoque estoque)
+        public async Task<IActionResult> Edit(int id, [Bind("IdEstoque,LivroIdLivro,LivrariaIdLivraria,QtdLivro")] Estoque estoque)
         {
             if (id != estoque.IdEstoque)
             {
@@ -117,6 +121,7 @@ namespace ProjetoLP3_4bim.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewData["LivrariaIdLivraria"] = new SelectList(_context.Livraria, "IdLivraria", "EmailLivraria", estoque.LivrariaIdLivraria);
             ViewData["LivroIdLivro"] = new SelectList(_context.Livro, "IdLivro", "TituloLivro", estoque.LivroIdLivro);
             return View(estoque);
         }
@@ -130,6 +135,7 @@ namespace ProjetoLP3_4bim.Controllers
             }
 
             var estoque = await _context.Estoque
+                .Include(e => e.LivrariaIdLivrariaNavigation)
                 .Include(e => e.LivroIdLivroNavigation)
                 .FirstOrDefaultAsync(m => m.IdEstoque == id);
             if (estoque == null)

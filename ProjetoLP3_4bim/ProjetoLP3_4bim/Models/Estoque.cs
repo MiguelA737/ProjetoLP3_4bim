@@ -16,6 +16,11 @@ namespace ProjetoLP3_4bim.Models
         [Required(ErrorMessage = "O livro é obrigatório")]
         public int LivroIdLivro { get; set; }
 
+        [Column("Livraria_idLivraria")]
+        [Display(Name = "Livraria")]
+        [Required(ErrorMessage = "A livraria é obrigatório")]
+        public int LivrariaIdLivraria { get; set; }
+
         [Column("qtdLivro")]
         [Display(Name = "Quantidade de exemplares")]
         [Required(ErrorMessage = "A quantidade de exemplares é obrigatória")]
@@ -25,5 +30,10 @@ namespace ProjetoLP3_4bim.Models
         [InverseProperty("Estoque")]
         [Display(Name = "Livro")]
         public Livro LivroIdLivroNavigation { get; set; }
+
+        [ForeignKey("LivrariaIdLivraria")]
+        [InverseProperty("Estoque")]
+        [Display(Name = "Livraria")]
+        public Livraria LivrariaIdLivrariaNavigation { get; set; }
     }
 }

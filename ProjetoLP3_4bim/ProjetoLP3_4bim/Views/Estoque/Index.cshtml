@@ -1,11 +1,11 @@
 ﻿@model IEnumerable<ProjetoLP3_4bim.Models.Estoque>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "Lista";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Lista</h2>
 
 <p>
     <a asp-action="Create">Cadastrar Novo</a>
@@ -18,6 +18,9 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.LivroIdLivroNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LivrariaIdLivrariaNavigation)
             </th>
             <th></th>
         </tr>
@@ -32,9 +35,12 @@
                 @Html.DisplayFor(modelItem => item.LivroIdLivroNavigation.TituloLivro)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.IdEstoque">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.IdEstoque">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.IdEstoque">Delete</a>
+                @Html.DisplayFor(modelItem => item.LivrariaIdLivrariaNavigation.EmailLivraria)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdEstoque">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.IdEstoque">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdEstoque">Excluir</a>
             </td>
         </tr>
 }

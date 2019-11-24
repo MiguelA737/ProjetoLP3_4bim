@@ -35,6 +35,7 @@ namespace ProjetoLP3_4bim.Models
         [Display(Name = "Título do livro")]
         public string TituloLivro { get; set; }
 
+        [DataType(DataType.Date)]
         [Column("dataLancamentoLivro", TypeName = "date")]
         [Display(Name = "Data de lançamento")]
         public DateTime DataLancamentoLivro { get; set; }

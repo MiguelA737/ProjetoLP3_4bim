@@ -33,11 +33,11 @@
             @Html.DisplayNameFor(model => model.EnderecoIdEnderecoNavigation)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.EnderecoIdEnderecoNavigation.IdEndereco)
+            @Html.DisplayFor(model => model.EnderecoIdEnderecoNavigation.RuaIdRuaNavigation.NomeRua), @Html.DisplayFor(model => model.EnderecoIdEnderecoNavigation.NumeroEndereco)
         </dd>
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.IdLivraria">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.IdLivraria">Editar</a> |
     <a asp-action="Index">Voltar para Lista</a>
 </div>

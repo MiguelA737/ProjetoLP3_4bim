@@ -113,6 +113,7 @@ CREATE TABLE Estoque (
 
 	idEstoque INTEGER PRIMARY KEY IDENTITY,
 	Livro_idLivro INTEGER REFERENCES Livro(idLivro) NOT NULL,
+	Livraria_idLivraria INTEGER REFERENCES Livraria(idLivraria) NOT NULL,
 	qtdLivro INTEGER NOT NULL
 
 )

@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using ProjetoLP3_4bim.ControllerHelpingUtils;
 using ProjetoLP3_4bim.Models;
 
 namespace ProjetoLP3_4bim.Controllers
@@ -21,7 +23,9 @@ namespace ProjetoLP3_4bim.Controllers
         // GET: Livraria
         public async Task<IActionResult> Index()
         {
-            var livrariasContext = _context.Livraria.Include(l => l.EnderecoIdEnderecoNavigation);
+            var livrariasContext = _context.Livraria
+                .Include(l => l.EnderecoIdEnderecoNavigation)
+                .Include(m => m.EnderecoIdEnderecoNavigation.RuaIdRuaNavigation);
             return View(await livrariasContext.ToListAsync());
         }
 
@@ -35,6 +39,7 @@ namespace ProjetoLP3_4bim.Controllers
 
             var livraria = await _context.Livraria
                 .Include(l => l.EnderecoIdEnderecoNavigation)
+                .Include(m => m.EnderecoIdEnderecoNavigation.RuaIdRuaNavigation)
                 .FirstOrDefaultAsync(m => m.IdLivraria == id);
             if (livraria == null)
             {
@@ -47,7 +52,13 @@ namespace ProjetoLP3_4bim.Controllers
         // GET: Livraria/Create
         public IActionResult Create()
         {
-            ViewData["EnderecoIdEndereco"] = new SelectList(_context.Endereco, "IdEndereco", "IdEndereco");
+            var enderecodb = _context.Endereco.Include(m => m.RuaIdRuaNavigation).ToList();
+            var enderecos = new List<Enderecos>();
+            foreach(var x in enderecodb)
+            {
+                enderecos.Add(new Enderecos((x.RuaIdRuaNavigation.NomeRua + ", " + x.NumeroEndereco), x.IdEndereco));
+            }
+            ViewData["EnderecoIdEndereco"] = new SelectList(enderecos, "Id", "Local");
             return View();
         }
 
@@ -64,7 +75,13 @@ namespace ProjetoLP3_4bim.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EnderecoIdEndereco"] = new SelectList(_context.Endereco, "IdEndereco", "IdEndereco", livraria.EnderecoIdEndereco);
+            var enderecodb = _context.Endereco.Include(m => m.RuaIdRuaNavigation).ToList();
+            var enderecos = new List<Enderecos>();
+            foreach (var x in enderecodb)
+            {
+                enderecos.Add(new Enderecos((x.RuaIdRuaNavigation.NomeRua + ", " + x.NumeroEndereco), x.IdEndereco));
+            }
+            ViewData["EnderecoIdEndereco"] = new SelectList(enderecos, "Id", "Local", livraria.EnderecoIdEndereco);
             return View(livraria);
         }
 
@@ -81,7 +98,13 @@ namespace ProjetoLP3_4bim.Controllers
             {
                 return NotFound();
             }
-            ViewData["EnderecoIdEndereco"] = new SelectList(_context.Endereco, "IdEndereco", "IdEndereco", livraria.EnderecoIdEndereco);
+            var enderecodb = _context.Endereco.Include(m => m.RuaIdRuaNavigation).ToList();
+            var enderecos = new List<Enderecos>();
+            foreach (var x in enderecodb)
+            {
+                enderecos.Add(new Enderecos((x.RuaIdRuaNavigation.NomeRua + ", " + x.NumeroEndereco), x.IdEndereco));
+            }
+            ViewData["EnderecoIdEndereco"] = new SelectList(enderecos, "Id", "Local");
             return View(livraria);
         }
 
@@ -117,7 +140,13 @@ namespace ProjetoLP3_4bim.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EnderecoIdEndereco"] = new SelectList(_context.Endereco, "IdEndereco", "IdEndereco", livraria.EnderecoIdEndereco);
+            var enderecodb = _context.Endereco.Include(m => m.RuaIdRuaNavigation).ToList();
+            var enderecos = new List<Enderecos>();
+            foreach (var x in enderecodb)
+            {
+                enderecos.Add(new Enderecos((x.RuaIdRuaNavigation.NomeRua + ", " + x.NumeroEndereco), x.IdEndereco));
+            }
+            ViewData["EnderecoIdEndereco"] = new SelectList(enderecos, "Id", "Local", livraria.EnderecoIdEndereco);
             return View(livraria);
         }
 
@@ -131,6 +160,7 @@ namespace ProjetoLP3_4bim.Controllers
 
             var livraria = await _context.Livraria
                 .Include(l => l.EnderecoIdEnderecoNavigation)
+                .Include(l => l.EnderecoIdEnderecoNavigation.RuaIdRuaNavigation)
                 .FirstOrDefaultAsync(m => m.IdLivraria == id);
             if (livraria == null)
             {

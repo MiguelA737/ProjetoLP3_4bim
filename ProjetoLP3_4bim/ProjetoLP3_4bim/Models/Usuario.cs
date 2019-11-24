@@ -22,8 +22,9 @@ namespace ProjetoLP3_4bim.Models
         [Display(Name = "Nome")]
         public string NomeUsuario { get; set; }
 
+        [DataType(DataType.Date)]
         [Column("dataNascUsuario", TypeName = "date")]
-        [Display(Name = "Data de nascimento")]
+        [Display(Name = "Data de Nascimento")]
         public DateTime DataNascUsuario { get; set; }
 
         [Required(ErrorMessage = "O telefone é obrigatório")]
