@@ -8,6 +8,7 @@ namespace ProjetoLP3_4bim.ControllerHelpingUtils
 {
     public class Enderecos
     {
+        //Classe que ajuda a modificar o texto que aparece nas SelectLsts de Create e Edit do Controller Livraria
         public Enderecos(string local, int id)
         {
             this.Id = id;
