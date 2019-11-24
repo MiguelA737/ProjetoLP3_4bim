@@ -1,7 +1,7 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
 for details on configuring this project to bundle and minify static web assets. */
 #Titulo {
-    color: deepskyblue;
+    color: white;
     font-size: 20px;
 }
 
@@ -23,11 +23,19 @@ body {
     border: double black 2px;
 }
 
+#texto-card2 {
+    margin-bottom:auto;
+}
+
+#texto-card3 {
+    color: #dc00c1;
+}
 /* Carousel */
 .carousel-caption p {
     font-size: 40px;
     line-height: 1.4;
     color: yellow;
+    margin-bottom:245px;
 }
 
 /* Make .svg files in the carousel display properly in older browsers */
