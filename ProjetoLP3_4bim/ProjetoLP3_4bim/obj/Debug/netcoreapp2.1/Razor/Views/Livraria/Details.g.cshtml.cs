@@ -154,17 +154,10 @@ using ProjetoLP3_4bim.Models;
             BeginContext(1070, 47, true);
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n</div>\r\n<div>\r\n    ");
             EndContext();
-<<<<<<< HEAD
-            BeginContext(1023, 62, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f5a3e25c7fb440b1bd01c0fa408d58ee", async() => {
-                BeginContext(1077, 4, true);
-                WriteLiteral("Edit");
-=======
             BeginContext(1117, 64, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "3fe75b0b9e944a2a927ef2705284011e", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "1ba8d24c3a5243219b86fe4a63c72931", async() => {
                 BeginContext(1171, 6, true);
                 WriteLiteral("Editar");
->>>>>>> altmodel
                 EndContext();
             }
             );
@@ -196,15 +189,9 @@ using ProjetoLP3_4bim.Models;
             BeginContext(1181, 8, true);
             WriteLiteral(" |\r\n    ");
             EndContext();
-<<<<<<< HEAD
-            BeginContext(1093, 43, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "afa9a9438de447299acbde9e9fdb3a22", async() => {
-                BeginContext(1115, 17, true);
-=======
             BeginContext(1189, 43, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "f737744e132b4bcf857594e86d42a24f", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "6c050e9e459c43df9d2b1fd6fd57cfeb", async() => {
                 BeginContext(1211, 17, true);
->>>>>>> altmodel
                 WriteLiteral("Voltar para Lista");
                 EndContext();
             }

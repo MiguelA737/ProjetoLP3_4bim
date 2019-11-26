@@ -268,3 +268,5 @@ F:\LP3\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\R
 F:\LP3\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\Razor\Views\Estoque\Edit.g.cshtml.cs
 F:\LP3\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\Razor\Views\Estoque\Index.g.cshtml.cs
 >>>>>>> altmodel
+F:\LP3\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\Razor\Views\Home\View.g.cshtml.cs
+F:\LP3\ProjetoLP3_4bim\ProjetoLP3_4bim\ProjetoLP3_4bim\obj\Debug\netcoreapp2.1\Razor\Views\Home\Search.g.cshtml.cs

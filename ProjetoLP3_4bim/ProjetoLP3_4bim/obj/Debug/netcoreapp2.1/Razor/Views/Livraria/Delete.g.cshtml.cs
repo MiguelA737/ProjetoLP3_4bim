@@ -158,23 +158,13 @@ using ProjetoLP3_4bim.Models;
             BeginContext(1122, 38, true);
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n    \r\n    ");
             EndContext();
-<<<<<<< HEAD
-            BeginContext(1066, 221, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "894a05fce99b453aa31c4a6ac9545a2f", async() => {
-                BeginContext(1092, 10, true);
-                WriteLiteral("\r\n        ");
-                EndContext();
-                BeginContext(1102, 44, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "808f469bbaca43daa143ee469b609f80", async() => {
-=======
             BeginContext(1160, 221, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c557c6cd1a7a4fe9ba9846a544e296d4", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "65b7a4546d484b5183fa16c462a6a82c", async() => {
                 BeginContext(1186, 10, true);
                 WriteLiteral("\r\n        ");
                 EndContext();
                 BeginContext(1196, 44, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "0d74df8ca22d4e858f19b11fe18d9a22", async() => {
->>>>>>> altmodel
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "7d55f128039a4c5dad537f505ffcd721", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
@@ -198,15 +188,9 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 BeginContext(1240, 85, true);
                 WriteLiteral("\r\n        <input type=\"submit\" value=\"Excluir\" class=\"btn btn-default\" /> |\r\n        ");
                 EndContext();
-<<<<<<< HEAD
-                BeginContext(1231, 43, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fb36f5cf6fa44709b0fb9f44e5f94d5e", async() => {
-                    BeginContext(1253, 17, true);
-=======
                 BeginContext(1325, 43, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "30d8631638824f26abcf28d696fe18dc", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "82312b89e8b74867a252fbe3e40c003c", async() => {
                     BeginContext(1347, 17, true);
->>>>>>> altmodel
                     WriteLiteral("Voltar para Lista");
                     EndContext();
                 }

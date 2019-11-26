@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewData["Title"] = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Pesquisa</h2>
+<div>
+    <form method="post" action="Search">
+
+        <select name="type" required>
+            <option disabled>Pesquisar por</option>
+            <option value="Autor">Autor</option>
+            <option value="Editora">Editora</option>
+            <option value="Gênero">Gênero</option>
+            <option value="Livraria">Livraria</option>
+            <option value="Livro">Livro</option>
+            <option value="Usuário">Usuário</option>
+        </select>
+
+        <input type="text" name="arg" placeholder="Pesquise o que quiser!" required />
+
+        <input type="submit" value="Pesquisar" />
+
+    </form>
+</div>
