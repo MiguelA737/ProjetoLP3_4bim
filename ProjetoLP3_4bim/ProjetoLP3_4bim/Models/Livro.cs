@@ -44,7 +44,7 @@ namespace ProjetoLP3_4bim.Models
         [Display(Name = "Quantidade de páginas")]
         public int QtdPaginasLivro { get; set; }
 
-        [Column("precoLivro", TypeName = "decimal(18, 0)")]
+        [Column("precoLivro", TypeName = "decimal(18, 2)")]
         [Display(Name = "Preço")]
         public decimal PrecoLivro { get; set; }
 

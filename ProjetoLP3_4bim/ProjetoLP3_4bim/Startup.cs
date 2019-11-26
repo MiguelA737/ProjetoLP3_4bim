@@ -38,6 +38,11 @@ namespace ProjetoLP3_4bim
 
             services.AddDbContext<LivrariasContext>(options => options.UseSqlServer(Configuration.GetConnectionString("LivrariasContext")));
 
+            services.AddMvc((options) =>
+            {
+                options.ModelBinderProviders.Insert(0, new CustomBinderProvider());
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

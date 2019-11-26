@@ -27,6 +27,8 @@ namespace ProjetoLP3_4bim.ModelHelpingUtils
                     }
                 );
 
+                context.SaveChanges();
+
                 context.Bairro.AddRange(
                     new Bairro
                     {
@@ -35,34 +37,39 @@ namespace ProjetoLP3_4bim.ModelHelpingUtils
                     }
                 );
 
+                context.SaveChanges();
+
                 context.Rua.AddRange(
                     new Rua
                     {
-                        IdRua = 1,
                         BairroIdBairro = 1,
                         NomeRua = "Rua da Mooca"
                     }
                 );
 
+                context.SaveChanges();
+
                 context.Endereco.AddRange(
                     new Endereco
                     {
-                        IdEndereco = 1,
                         RuaIdRua = 1,
                         NumeroEndereco = 333
                     }
                 );
 
+                context.SaveChanges();
+
                 context.Livraria.AddRange(
                     new Livraria
                     {
-                        IdLivraria = 1,
                         EnderecoIdEndereco = 1,
                         NomeLivraria = "Culturoteca",
                         TelLivraria = "11940536453",
                         EmailLivraria = "cult@cult.com"
                     }
                 );
+
+                context.SaveChanges();
 
                 context.Usuario.AddRange(
                     new Usuario
@@ -74,6 +81,8 @@ namespace ProjetoLP3_4bim.ModelHelpingUtils
                     }
                 );
 
+                context.SaveChanges();
+
                 context.GeneroLivro.AddRange(
                     new GeneroLivro
                     {
@@ -81,6 +90,8 @@ namespace ProjetoLP3_4bim.ModelHelpingUtils
                         DesGeneroLivro = "Histórias com mistério e suspense!"
                     }
                 );
+
+                context.SaveChanges();
 
                 context.Editora.AddRange(
                     new Editora
@@ -90,6 +101,8 @@ namespace ProjetoLP3_4bim.ModelHelpingUtils
                         EmailEditora = "at@atica.com.br"
                     }
                 );
+
+                context.SaveChanges();
 
                 context.Autor.AddRange(
                     new Autor
@@ -102,10 +115,11 @@ namespace ProjetoLP3_4bim.ModelHelpingUtils
                     }
                 );
 
+                context.SaveChanges();
+
                 context.Livro.AddRange(
                     new Livro
                     {
-                        IdLivro = 1,
                         EditoraIdEditora = 1,
                         GeneroLivroIdGeneroLivro = 1,
                         AutorIdAutor = 1,
@@ -117,20 +131,22 @@ namespace ProjetoLP3_4bim.ModelHelpingUtils
                     }
                 );
 
+                context.SaveChanges();
+
                 context.Estoque.AddRange(
                     new Estoque
                     {
-                        IdEstoque = 1,
                         LivroIdLivro = 1,
                         LivrariaIdLivraria = 1,
                         QtdLivro = 20
                     }
                 );
 
+                context.SaveChanges();
+
                 context.Compra.AddRange(
                     new Compra
                     {
-                        IdCompra = 1,
                         LivroIdLivro = 1,
                         UsuarioIdUsuario = 1
                     }
