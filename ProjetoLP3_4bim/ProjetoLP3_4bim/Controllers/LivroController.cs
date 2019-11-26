@@ -49,8 +49,8 @@ namespace ProjetoLP3_4bim.Controllers
         // GET: Livro/Create
         public IActionResult Create()
         {
-            ViewData["AutorIdAutor"] = new SelectList(_context.Autor, "IdAutor", "EmailAutor");
-            ViewData["EditoraIdEditora"] = new SelectList(_context.Editora, "IdEditora", "EmailEditora");
+            ViewData["AutorIdAutor"] = new SelectList(_context.Autor, "IdAutor", "NomeAutor");
+            ViewData["EditoraIdEditora"] = new SelectList(_context.Editora, "IdEditora", "NomeEditora");
             ViewData["GeneroLivroIdGeneroLivro"] = new SelectList(_context.GeneroLivro, "IdGeneroLivro", "NomeGeneroLivro");
             return View();
         }
@@ -68,8 +68,8 @@ namespace ProjetoLP3_4bim.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AutorIdAutor"] = new SelectList(_context.Autor, "IdAutor", "EmailAutor", livro.AutorIdAutor);
-            ViewData["EditoraIdEditora"] = new SelectList(_context.Editora, "IdEditora", "EmailEditora", livro.EditoraIdEditora);
+            ViewData["AutorIdAutor"] = new SelectList(_context.Autor, "IdAutor", "NomeAutor", livro.AutorIdAutor);
+            ViewData["EditoraIdEditora"] = new SelectList(_context.Editora, "IdEditora", "NomeEditora", livro.EditoraIdEditora);
             ViewData["GeneroLivroIdGeneroLivro"] = new SelectList(_context.GeneroLivro, "IdGeneroLivro", "NomeGeneroLivro", livro.GeneroLivroIdGeneroLivro);
             return View(livro);
         }
@@ -87,8 +87,8 @@ namespace ProjetoLP3_4bim.Controllers
             {
                 return NotFound();
             }
-            ViewData["AutorIdAutor"] = new SelectList(_context.Autor, "IdAutor", "EmailAutor", livro.AutorIdAutor);
-            ViewData["EditoraIdEditora"] = new SelectList(_context.Editora, "IdEditora", "EmailEditora", livro.EditoraIdEditora);
+            ViewData["AutorIdAutor"] = new SelectList(_context.Autor, "IdAutor", "NomeAutor", livro.AutorIdAutor);
+            ViewData["EditoraIdEditora"] = new SelectList(_context.Editora, "IdEditora", "NomeEditora", livro.EditoraIdEditora);
             ViewData["GeneroLivroIdGeneroLivro"] = new SelectList(_context.GeneroLivro, "IdGeneroLivro", "NomeGeneroLivro", livro.GeneroLivroIdGeneroLivro);
             return View(livro);
         }
@@ -125,8 +125,8 @@ namespace ProjetoLP3_4bim.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AutorIdAutor"] = new SelectList(_context.Autor, "IdAutor", "EmailAutor", livro.AutorIdAutor);
-            ViewData["EditoraIdEditora"] = new SelectList(_context.Editora, "IdEditora", "EmailEditora", livro.EditoraIdEditora);
+            ViewData["AutorIdAutor"] = new SelectList(_context.Autor, "IdAutor", "NomeAutor", livro.AutorIdAutor);
+            ViewData["EditoraIdEditora"] = new SelectList(_context.Editora, "IdEditora", "NomeEditora", livro.EditoraIdEditora);
             ViewData["GeneroLivroIdGeneroLivro"] = new SelectList(_context.GeneroLivro, "IdGeneroLivro", "NomeGeneroLivro", livro.GeneroLivroIdGeneroLivro);
             return View(livro);
         }

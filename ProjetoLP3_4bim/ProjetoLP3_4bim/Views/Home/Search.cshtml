@@ -11,21 +11,56 @@
 
 <h2>Pesquisa</h2>
 <div>
-    <form method="post" action="Search">
+    <select id="type" name="type" required>
+        <option value="Livro">Livro</option>
+        <option value="Livraria">Livraria</option>
+    </select>
 
-        <select name="type" required>
-            <option disabled>Pesquisar por</option>
-            <option value="Autor">Autor</option>
-            <option value="Editora">Editora</option>
-            <option value="Gênero">Gênero</option>
-            <option value="Livraria">Livraria</option>
-            <option value="Livro">Livro</option>
-            <option value="Usuário">Usuário</option>
-        </select>
+    <input type="text" id="arg" name="arg" placeholder="Pesquise o que quiser!" required />
 
-        <input type="text" name="arg" placeholder="Pesquise o que quiser!" required />
-
-        <input type="submit" value="Pesquisar" />
-
-    </form>
+    <button id="search" name="search" type="button">Pesquisar</button>
 </div>
+<br />
+<br />
+<div class="row">
+    <div id="results"></div>
+</div>
+
+
+@section Scripts{
+
+    <script>
+        $(function () {
+            $("#search").on("click", function () {
+                var search = {
+                    Input: $("#arg").val(),
+                    Type: $("#type").val()
+                }
+
+                $.getJSON("/Home/GetResults", search, function (data) {
+                    var results = $("#results");
+                    results.empty();
+
+                    if (data.length == 0) {
+                        results.append('<div class="alert alert-warning">Não há resultados.</div>');
+                        return false;
+                    }
+                    for (var i = 0; i < data.length; i++) {
+                        if (data[i].type == "Livro") {
+                            results.append('<div class="card" style="border: solid black 1px;"><p>Título: ' + data[i].tituloLivro + '</p><p>Autor: ' + data[i].autorNomeAutor + '</p><p>Editora: ' + data[i].editoraNomeEditora + '</p><p>Gênero: ' + data[i].generoLivroNomeGeneroLivro + '</p><p>Data de Lançamento: ' + data[i].dataLancamentoLivro + '</p><p>Quantidade de Páginas: ' + data[i].qtdPaginasLivro + '<p>Preço: ' + data[i].precoLivro + '</p></div><br /><br />')
+                        }
+                        if (data[i].type == "Livraria") {
+                            results.append('<div class="card" style="border: solid black 1px;"><p>Nome: ' + data[i].nomeLivraria + '</p><p>Local: ' + data[i].local + '<p>Telefone: ' + data[i].telLivraria + '</p><p> E-mail: ' + data[i].emailLivraria + '</p>')
+                        }
+                    }
+
+                })
+
+            })
+
+        })
+
+
+    </script>
+
+}
